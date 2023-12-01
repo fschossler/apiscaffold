@@ -8,7 +8,7 @@ import (
 
 func CreateFolder(folderName string) {
 	os.Mkdir(folderName, 0775)
-	fmt.Printf("The folder %s was created.", folderName)
+	fmt.Printf("The folder %s was created.\n", folderName)
 }
 
 func CreateFile(fileName string) {
@@ -17,5 +17,5 @@ func CreateFile(fileName string) {
 		log.Fatal(err)
 	}
 	defer file.Close()
-	fmt.Printf("File %s was created.", fileName)
+	fmt.Printf("File %s was created.\n", fileName)
 }
