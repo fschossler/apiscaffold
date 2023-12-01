@@ -19,3 +19,15 @@ func CreateFile(fileName string) {
 	defer file.Close()
 	fmt.Printf("File %s was created.\n", fileName)
 }
+
+func AllFoldersCreation(folderNames ...string) {
+	for _, folder := range folderNames {
+		CreateFolder(folder)
+	}
+}
+
+func AllFilesCreation(fileNames ...string) {
+	for _, file := range fileNames {
+		CreateFile(file)
+	}
+}
